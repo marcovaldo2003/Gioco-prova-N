@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +9,13 @@
 </head>
 <body>
     <div id="game-container"></div>
+    <script>
+        document.body.addEventListener('pointerdown', () => {
+            if (Phaser.AudioContext) {
+                Phaser.AudioContext.resume();
+            }
+        });
+    </script>
     <script src="game.js"></script>
 </body>
 </html>
